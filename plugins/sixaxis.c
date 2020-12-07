@@ -337,7 +337,6 @@ static bool setup_device(int fd, const char *sysfs_path,
 	device = btd_adapter_find_device(adapter, &device_bdaddr,
 							BDADDR_BREDR);
 	if (device != NULL &&
-		btd_device_is_connected(device) &&
 		g_slist_find_custom(btd_device_get_uuids(device), HID_UUID,
 						(GCompareFunc)strcasecmp)) {
 		char device_addr[18];
